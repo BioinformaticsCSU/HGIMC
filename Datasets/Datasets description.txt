@@ -1,0 +1,52 @@
+MSNMF algorithm could conduct drug-disease predictions on two datasets: Fdataset_ms and Cdataset_ms, which can be loaded by matlab.
+
+(1) Fdataset_ms
+Wrname: the DrugBank IDs of drugs;
+
+Wdname: the OMIM IDs of diseases;
+
+drug_ChemS: chemical structure similarity matrix;
+
+drug_AtcS: drug's ATC code similarity matrix;
+
+drug_SideS: side-effect similarity matrix;
+
+drug_DDIS: drug-drug interaction similarity matrix;
+
+drug_TargetS: drug's target profile similarity matrix;
+
+disease_PhS: disease phenotype similarity matrix;
+
+disease_DoS: disease ontology similarity matrix;
+
+didr: disease-drug association matrix.
+
+(2) Cdataset_ms
+Wrname: the DrugBank IDs of drugs;
+
+Wdname: the OMIM IDs of diseases;
+
+drug_ChemS: chemical structure similarity matrix;
+
+drug_AtcS: drug's ATC code similarity matrix;
+
+drug_SideS: side-effect similarity matrix;
+
+drug_DDIS: drug-drug interaction similarity matrix;
+
+drug_TargetS: drug's target profile similarity matrix;
+
+disease_PhS: disease phenotype similarity matrix;
+
+disease_DoS: disease ontology similarity matrix;
+
+didr: disease-drug association matrix.
+
+Tips:
+Fdataset_ms is obtained from the supplementary material of paper Gottlieb et al., 2011.
+[Gottlieb et al. PREDICT: a method for inferring novel drug indications with application to personalized medicine[J]. Molecular systems biology, 2011,7(1), 496.];
+
+Cdataset_ms is downloaded from the supplementary material of paper H Luo et al.,2016.
+[H Luo et al. Drug repositioning based on comprehensive similarity measures and Bi-Random Walk algorithm[J]. Bioinformatics, 2016, 32(17).];
+
+We collected drug_AtcS, drug_SideS, drug_DDIS, drug_TargetS, and disease_DoS for Fdataset_ms and Cdataset_ms.
