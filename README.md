@@ -1,14 +1,12 @@
 # HGIMC
-Inspired by the low-rank completion of BNNR and the guilt-by-association principle of HGBI, we propose a heterogeneous graph inference with matrix completion (HGIMC) method to predict potential indications for drugs. 
+Inspired by the low-rank completion of BNNR and the guilt-by-association principle of HGBI, we propose a heterogeneous graph inference with matrix completion (HGIMC) method to predict potential indications for drugs. The novelty of HGIMC method is improving the HGBI algorithm from two perspectives. The one is enriching the sparse heterogeneous association network by the bounded matrix completion (BMC). The BMC can add some strong drug-disease associations without any prior similarity, which can provide more reliable paths for the graph inference. The other one is enhancing similarity measures by the Gaussian radial basis function (GRB). The GRB can compute a comprehensive measure based on the row/column vectors of similarity matrix for the graph inference. It plays an important role in identifying potential associations for new nodes.
 
 # Requirements
 * Matlab >= 2014
 
 # Dataset Description
 * Wrname: the DrugBank IDs of drugs;
-
 * Wdname: the OMIM IDs of diseases;
-
 * drug_ChemS: chemical structure similarity matrix;
 
 * drug_AtcS: drug's ATC code similarity matrix;
@@ -25,7 +23,15 @@ Inspired by the low-rank completion of BNNR and the guilt-by-association princip
 
 * didr: disease-drug association matrix.
 
-# Description
+# Functions Description
+* fBMC.m
+* fGRB.m
+* fHGI.m
+* fNorm.m
+* svt.m
+
+fBMC.m
+# A Quickstart Guide
 * Demo_HGIMC.m: demonstrates the experimental result on Fdataset_ms by HGIMC algorithm.
 
 # Contact:
