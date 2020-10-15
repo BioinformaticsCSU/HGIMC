@@ -36,7 +36,7 @@ Users can immediately start playing with HGIMC with 'Demo_HGIMC.m'.
 
 # Run HGIMC on your own data
 
-hyper-parameters: alpha=10, beta=10, the threshold=0.1, and gamma=0.1.
+hyper-parameters: ```alpha=10```, beta=10, *the threshold=0.1*, and gamma=0.1.
 
 
 
