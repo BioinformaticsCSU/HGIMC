@@ -4,6 +4,11 @@ Inspired by the low-rank completion of BNNR and the guilt-by-association princip
 # Requirements
 * Matlab >= 2014
 
+# Installation
+HGIMC can be downloaded by
+git clone https://github.com/BioinformaticsCSU/HGIMC
+Installation has been tested in a Windows platform.
+
 # Dataset Description
 * Wrname: the DrugBank IDs of drugs;
 * Wdname: the OMIM IDs of diseases;
@@ -19,13 +24,18 @@ Inspired by the low-rank completion of BNNR and the guilt-by-association princip
 # Functions Description
 * fBMC.m: this function can implement the bounded matrix completion algorithm;
 * fGRB.m: this function can implement the Gaussian radial basis function;
-* fHGI.m: this function can implement the heterogeneous graph inference;
+* fHGI.m: this function can implement the heterogeneous graph inference algorithm;
 * fNorm.m: this function can normalize the similarity matrix;
-* svt.m: this function can implement singular value thresholding operator
+* svt.m: this function can implement singular value thresholding operator.
 
 # A Quickstart Guide
 Users can immediately start playing with HGIMC with 'Demo_HGIMC.m'.
 * Demo_HGIMC.m: it demonstrates a experimental result on the gold standard dataset (Fdataset_ms) by HGIMC algorithm.
+
+# Run HGIMC on your own data
+hyper-parameters: sigma=0.5, the threshold=0.1, and gamma=0.1.
+\alpha=10, beta=10, 
+
 
 # Contact:
 If you have any questions or suggestions with the code, please let us know. 
