@@ -6,10 +6,9 @@ Inspired by the low-rank completion of BNNR and the guilt-by-association princip
 
 # Installation
 HGIMC can be downloaded by
-``
-git clone https://github.com/BioinformaticsCSU/HGIMC
+```git clone https://github.com/BioinformaticsCSU/HGIMC
 
-```Installation has been tested in a Windows platform.
+Installation has been tested in a Windows platform.
 
 # Dataset Description
 * Wrname: the DrugBank IDs of drugs;
