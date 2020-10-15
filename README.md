@@ -2,7 +2,7 @@
 Inspired by the low-rank completion of BNNR and the guilt-by-association principle of HGBI, we propose a heterogeneous graph inference with matrix completion (HGIMC) method to predict potential indications for drugs. 
 
 # Requirements
-Matlab >= 2014
+* Matlab >= 2014
 
 # Dataset Description
 Wrname: the DrugBank IDs of drugs;
