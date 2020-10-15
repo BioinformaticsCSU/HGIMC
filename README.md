@@ -9,8 +9,7 @@ HGIMC can be downloaded by
 ``
 git clone https://github.com/BioinformaticsCSU/HGIMC
 
-``
-Installation has been tested in a Windows platform.
+```Installation has been tested in a Windows platform.
 
 # Dataset Description
 * Wrname: the DrugBank IDs of drugs;
