@@ -8,7 +8,7 @@ Inspired by the low-rank completion of BNNR and the guilt-by-association princip
 HGIMC can be downloaded by
 ```
 git clone https://github.com/BioinformaticsCSU/HGIMC
-
+```
 Installation has been tested in a Windows platform.
 
 # Dataset Description
@@ -35,8 +35,9 @@ Users can immediately start playing with HGIMC with 'Demo_HGIMC.m'.
 * Demo_HGIMC.m: it demonstrates a experimental result on the gold standard dataset (Fdataset_ms) by HGIMC algorithm.
 
 # Run HGIMC on your own data
-hyper-parameters: sigma=0.5, the threshold=0.1, and gamma=0.1.
-\alpha=10, beta=10, 
+
+hyper-parameters: alpha=10, beta=10, the threshold=0.1, and gamma=0.1.
+
 
 
 # Contact:
