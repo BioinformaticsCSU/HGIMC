@@ -85,6 +85,7 @@ We provided instructions on implementing HGIMC model with user's own data. One c
 The required data includes drug-disease association matirx and similarity matrices, which are all saved by ```mat``` files.
 
 **Step 2**: Modify four lines in ```Demo_HGIMC.m```
+
 You can find ```Fdataset_ms, A_DR, R, D``` in ```Demo_HGIMC.m```. All you need to do is to replace them with your own data.
 
 # Contact:
