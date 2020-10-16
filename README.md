@@ -33,7 +33,7 @@ Installation has been tested in a Windows platform.
 # Instructions
 We provide detailed step-by-step instructions for running HGIMC model.
 
-**Step 1**: add folders for data sets and function sets
+**Step 1**: add datasets\functions paths
 ```
 addpath('Datasets');
 addpath('Functions');
