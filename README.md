@@ -47,10 +47,16 @@ D=(disease_PhS+disease_DoS)/2;
 ```
 **Step 3**: Parameter Settings
 
-Fixed parameters: alpha=10, beta=10.
-
-hyper-parameters: the threshold=0.1, gamma=0.1, maxiter = 300; tol1 = 2*1e-3; tol2 = 1*1e-5.
-
+The hyper-parameters are fixed.
+```
+alpha=10; 
+beta=10; 
+gamma=0.1; 
+threshold=0.1;
+maxiter = 300; 
+tol1 = 2*1e-3;   
+tol2 = 1*1e-5;
+```
 **Step 4**: Run the bounded matrix completion (BMC)
 ```
 trIndex = double(A_DR ~= 0);
