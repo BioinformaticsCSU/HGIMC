@@ -74,7 +74,7 @@ A_recovery = fHGI(gamma,A_DD,A_RR,A_DR0);
 ```
 
 # A Quickstart Guide
-Users can immediately start playing with HGIMC running ```Demo_HGIMC.m```.
+Users can immediately start playing with HGIMC running ```Demo_HGIMC.m``` in matlab.
 * ```Demo_HGIMC.m```: it demonstrates a process of predicting drug-disease associations on the gold standard dataset (Fdataset_ms) by HGIMC algorithm.
 
 # Run HGIMC on your own data
