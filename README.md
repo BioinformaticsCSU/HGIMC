@@ -24,19 +24,41 @@ Installation has been tested in a Windows platform.
 * didr: disease-drug association matrix.
 
 # Functions Description
-* fBMC.m: this function can implement the bounded matrix completion algorithm;
-* fGRB.m: this function can implement the Gaussian radial basis function;
-* fHGI.m: this function can implement the heterogeneous graph inference algorithm;
-* fNorm.m: this function can normalize the similarity matrix;
-* svt.m: this function can implement singular value thresholding operator.
+* ```fBMC.m```: this function can implement the bounded matrix completion algorithm;
+* ```fGRB.m```: this function can implement the Gaussian radial basis function;
+* ```fHGI.m```: this function can implement the heterogeneous graph inference algorithm;
+* ```fNorm.m```: this function can normalize the similarity matrix;
+* ```svt.m```: this function can implement singular value thresholding operator.
+
+# Instructions
+We provide detailed step-by-step instructions for running HGIMC model.
+**Step 1**: Add folders for data sets and function sets
+```
+addpath('Datasets');
+addpath('Functions');
+```
+**Step 2**: Load datasets with association matirx and similarity matrices
+```
+load Fdataset_ms
+A_DR = didr;
+R=(drug_ChemS+drug_AtcS+drug_SideS+drug_DDIS+drug_TargetS)/5;
+D=(disease_PhS+disease_DoS)/2;
+```
+**Step 3**: Parameter Settings
+Fixed hyper-parameters: alpha=10, beta=10, the threshold=0.1, and gamma=0.1.
+**Step 4**: Run BMC
+
+
+
+
 
 # A Quickstart Guide
-Users can immediately start playing with HGIMC with 'Demo_HGIMC.m'.
+Users can immediately start playing with HGIMC running ```Demo_HGIMC.m```.
 * Demo_HGIMC.m: it demonstrates a experimental result on the gold standard dataset (Fdataset_ms) by HGIMC algorithm.
 
 # Run HGIMC on your own data
 
-hyper-parameters: ```alpha=10```, beta=10, *the threshold=0.1*, and gamma=0.1.
+
 
 
 
