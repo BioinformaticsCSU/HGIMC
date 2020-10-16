@@ -32,6 +32,7 @@ Installation has been tested in a Windows platform.
 
 # Instructions
 We provide detailed step-by-step instructions for running HGIMC model.
+
 **Step 1**: Add folders for data sets and function sets
 ```
 addpath('Datasets');
@@ -45,23 +46,41 @@ R=(drug_ChemS+drug_AtcS+drug_SideS+drug_DDIS+drug_TargetS)/5;
 D=(disease_PhS+disease_DoS)/2;
 ```
 **Step 3**: Parameter Settings
-Fixed hyper-parameters: alpha=10, beta=10, the threshold=0.1, and gamma=0.1.
-**Step 4**: Run BMC
 
+Fixed parameters: alpha=10, beta=10.
 
+hyper-parameters: the threshold=0.1, gamma=0.1, maxiter = 300; tol1 = 2*1e-3; tol2 = 1*1e-5.
 
-
+**Step 4**: Run the bounded matrix completion (BMC)
+```
+trIndex = double(A_DR ~= 0);
+[A_bmc,iter] = fBMC(alpha, beta, A_DR, trIndex, tol1, tol2, maxiter, 0, 1);
+A_DR0=A_bmc.*double(A_bmc > threshold);
+```
+**Step 5**: Run Gaussian Radial Basis function (GRB)
+```
+A_RR=fGRB(R,0.5);
+A_DD=fGRB(D,0.5);
+```
+**Step 5**: Run the heterogeneous graph based inference (HGBI)
+```
+A_recovery = fHGI(gamma,A_DD,A_RR,A_DR0);
+```
 
 # A Quickstart Guide
 Users can immediately start playing with HGIMC running ```Demo_HGIMC.m```.
-* Demo_HGIMC.m: it demonstrates a experimental result on the gold standard dataset (Fdataset_ms) by HGIMC algorithm.
+* ```Demo_HGIMC.m```: it demonstrates a process of predicting drug-disease associations on the gold standard dataset (Fdataset_ms) by HGIMC algorithm.
 
 # Run HGIMC on your own data
+We provided instructions on implementing HGIMC model with user's own data. One could directly run HGIMC model in ```Demo_HGIMC.m``` with custom data by the following instructions.
 
+**Step 1**: Prepare your own data and add into the ```Datasets``` folder
 
+The required data includes drug-disease association matirx and similarity matrices, which are all saved by ```mat``` files.
 
-
+**Step 2**: Modify four lines in ```Demo_HGIMC.m```
+You can find ```Fdataset_ms, A_DR, R, D``` in ```Demo_HGIMC.m```. All you need to do is to replace them with your own data.
 
 # Contact:
 If you have any questions or suggestions with the code, please let us know. 
-Contact Mengyun Yang at mengyunyang@csu.edu.cn
+Contact Mengyun Yang at ```mengyunyang@csu.edu.cn```
