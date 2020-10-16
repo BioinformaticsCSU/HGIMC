@@ -42,17 +42,17 @@ addpath('Functions');
 ```
 load Fdataset_ms
 A_DR = didr;
-R=(drug_ChemS+drug_AtcS+drug_SideS+drug_DDIS+drug_TargetS)/5;
-D=(disease_PhS+disease_DoS)/2;
+R = (drug_ChemS+drug_AtcS+drug_SideS+drug_DDIS+drug_TargetS)/5;
+D = (disease_PhS+disease_DoS)/2;
 ```
 **Step 3**: parameter Settings
 
 The hyper-parameters are fixed.
 ```
-alpha=10; 
-beta=10; 
-gamma=0.1; 
-threshold=0.1;
+alpha = 10; 
+beta = 10; 
+gamma = 0.1; 
+threshold = 0.1;
 maxiter = 300; 
 tol1 = 2*1e-3;   
 tol2 = 1*1e-5;
@@ -60,24 +60,24 @@ tol2 = 1*1e-5;
 **Step 4**: run the bounded matrix completion (BMC)
 ```
 trIndex = double(A_DR ~= 0);
-[A_bmc,iter] = fBMC(alpha, beta, A_DR, trIndex, tol1, tol2, maxiter, 0, 1);
-A_DR0=A_bmc.*double(A_bmc > threshold);
+[A_bmc, iter] = fBMC(alpha, beta, A_DR, trIndex, tol1, tol2, maxiter, 0, 1);
+A_DR0 = A_bmc.*double(A_bmc > threshold);
 ```
 **Step 5**: run Gaussian Radial Basis function (GRB)
 ```
-A_RR=fGRB(R,0.5);
-A_DD=fGRB(D,0.5);
+A_RR = fGRB(R, 0.5);
+A_DD = fGRB(D, 0.5);
 ```
 **Step 5**: run the heterogeneous graph based inference (HGBI)
 ```
-A_recovery = fHGI(gamma,A_DD,A_RR,A_DR0);
+A_recovery = fHGI(gamma, A_DD, A_RR, A_DR0);
 ```
 
 # A Quickstart Guide
 Users can immediately start playing with HGIMC running ```Demo_HGIMC.m``` in matlab.
 * ```Demo_HGIMC.m```: it demonstrates a process of predicting drug-disease associations on the gold standard dataset (Fdataset_ms) by HGIMC algorithm.
 
-# Run HGIMC on your own data
+# Run HGIMC on User's Own Data
 We provided instructions on implementing HGIMC model with user's own data. One could directly run HGIMC model in ```Demo_HGIMC.m``` with custom data by the following instructions.
 
 **Step 1**: Prepare your own data and add into the ```Datasets``` folder
@@ -87,6 +87,10 @@ The required data includes drug-disease association matirx and similarity matric
 **Step 2**: Modify four lines in ```Demo_HGIMC.m```
 
 You can find ```Fdataset_ms, A_DR, R, D``` in ```Demo_HGIMC.m```. All you need to do is to replace them with your own data.
+
+# Docker Image Link of HGIMC
+
+https://hub.docker.com/repository/docker/yangmy84/hgimc
 
 # Contact
 If you have any questions or suggestions with the code, please let us know. 
