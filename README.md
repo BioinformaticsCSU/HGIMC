@@ -33,19 +33,19 @@ Installation has been tested in a Windows platform.
 # Instructions
 We provide detailed step-by-step instructions for running HGIMC model.
 
-**Step 1**: Add folders for data sets and function sets
+**Step 1**: add folders for data sets and function sets
 ```
 addpath('Datasets');
 addpath('Functions');
 ```
-**Step 2**: Load datasets with association matirx and similarity matrices
+**Step 2**: load datasets with association matirx and similarity matrices
 ```
 load Fdataset_ms
 A_DR = didr;
 R=(drug_ChemS+drug_AtcS+drug_SideS+drug_DDIS+drug_TargetS)/5;
 D=(disease_PhS+disease_DoS)/2;
 ```
-**Step 3**: Parameter Settings
+**Step 3**: parameter Settings
 
 The hyper-parameters are fixed.
 ```
@@ -57,18 +57,18 @@ maxiter = 300;
 tol1 = 2*1e-3;   
 tol2 = 1*1e-5;
 ```
-**Step 4**: Run the bounded matrix completion (BMC)
+**Step 4**: run the bounded matrix completion (BMC)
 ```
 trIndex = double(A_DR ~= 0);
 [A_bmc,iter] = fBMC(alpha, beta, A_DR, trIndex, tol1, tol2, maxiter, 0, 1);
 A_DR0=A_bmc.*double(A_bmc > threshold);
 ```
-**Step 5**: Run Gaussian Radial Basis function (GRB)
+**Step 5**: run Gaussian Radial Basis function (GRB)
 ```
 A_RR=fGRB(R,0.5);
 A_DD=fGRB(D,0.5);
 ```
-**Step 5**: Run the heterogeneous graph based inference (HGBI)
+**Step 5**: run the heterogeneous graph based inference (HGBI)
 ```
 A_recovery = fHGI(gamma,A_DD,A_RR,A_DR0);
 ```
