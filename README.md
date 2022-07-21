@@ -94,4 +94,18 @@ https://hub.docker.com/repository/docker/yangmy84/hgimc
 
 # Contact
 If you have any questions or suggestions with the code, please let us know. 
-Contact Mengyun Yang at ```mengyunyang@csu.edu.cn```
+Contact Mengyun Yang at mengyun_yang@126.com
+
+# Citation
+```
+@article{yang2020heterogeneous,
+  title={Heterogeneous graph inference with matrix completion for computational drug repositioning},
+  author={Yang, Mengyun and Huang, Lan and Xu, Yunpei and Lu, Chengqian and Wang, Jianxin},
+  journal={Bioinformatics},
+  volume={36},
+  number={22-23},
+  pages={5456--5464},
+  year={2020},
+  publisher={Oxford University Press}
+}
+```
