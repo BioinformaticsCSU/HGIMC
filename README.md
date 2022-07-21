@@ -97,6 +97,7 @@ If you have any questions or suggestions with the code, please let us know.
 Contact Mengyun Yang at mengyun_yang@126.com
 
 # Citation
+Yang M, Huang L, Xu Y, et al. Heterogeneous graph inference with matrix completion for computational drug repositioning[J]. Bioinformatics, 2020, 36(22-23): 5456-5464.
 ```
 @article{yang2020heterogeneous,
   title={Heterogeneous graph inference with matrix completion for computational drug repositioning},
